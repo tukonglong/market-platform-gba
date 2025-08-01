@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: prod
+---
+spring:
+  application:
+    name: client
+  cloud:
+    nacos:
+      username: nacos
+      password: Gba@!23456
+      config:
+        enabled: true
+        file-extension: yaml
+        server-addr: 120.79.156.201:8848
+        namespace: 8f2b6b54-3af0-4e11-b69d-bee6e74b7da5
+      discovery:
+        server-addr: 120.79.156.201:8848
+        namespace: 8f2b6b54-3af0-4e11-b69d-bee6e74b7da5
+  config:
+    activate:
+      on-profile: dev
+
+---
+spring:
+  application:
+   name: client
+  cloud:
+    nacos:
+      username: nacos
+      password: Gba@!23456
+      config:
+        enabled: true
+        file-extension: yaml
+        server-addr: 120.79.156.201:8848
+        namespace: 6ac454cd-47d5-4f73-9748-a726fd815702
+      discovery:
+        server-addr: 120.79.156.201:8848
+        namespace: 6ac454cd-47d5-4f73-9748-a726fd815702
+  config:
+    activate:
+      on-profile: prod
+
